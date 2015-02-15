@@ -13,7 +13,8 @@ import (
   "io"
   "math/big"
 
-  "github.com/conformal/btcec"
+  // "github.com/conformal/btcec"
+  "github.com/btcsuite/btcd/btcec"
   "code.google.com/p/go.crypto/ripemd160"
 )
 
