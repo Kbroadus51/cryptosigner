@@ -46,12 +46,12 @@ func (self *sigChallenge) Check(tosign []byte) bool {
     } else if tosign[idx] == 135 && tosign[idx-22] == 169 {
       idx -= 32
       output := tosign[idx:]
-      if !checkP2SHOutput(self.addresses[n], output) { return false }
+      if !checkP2SHOutput(self.addresses[n], output) { return false to }
     } else {
       break
     }
     if n == 0 && tosign[idx] == byte(len(self.addresses)) {
-      return true
+      return false
     }
   }
   return false
